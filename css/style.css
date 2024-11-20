@@ -167,7 +167,7 @@ body{
 .graficos {
     margin: auto;
     width: 90%;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 	background-color: var(--cinza);
 	padding: 1em;
     border-radius: 10px;
@@ -255,7 +255,7 @@ body{
 	margin-top: 3px;
 	text-align: center;
     color: var(--branco);
-	font-size: 12px;
+	font-size: 10px;
 }
 
 .dias {
@@ -273,7 +273,7 @@ body{
 }
 
 .barra-segunda {
-    background-color: var(--amarelo);
+    background-color: orange;
     border-radius: 5px;
 }
 
@@ -309,7 +309,56 @@ body{
 	margin-top: 3px;
 	text-align: center;
     color: var(--dark);
-	font-size: 12px;
+	font-size: 10px;
+}
+
+/*MEDICAO*/
+.medicao{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.medicao h3{
+    font-weight: 600;
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 1em;
+    font-size: 13px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.tabela{
+    margin-bottom: 5em;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.tabela thead{
+    border: 2px solid var(--azul);
+    background-color: var(--dark);
+    padding: 1em;
+}
+
+.tabela thead th{
+    padding: 0.4em;
+    border: 1px solid var(--azul);
+    color: var(--branco);
+    font-size: 10px;
+}
+
+.tabela tr{
+    border: 1px solid var(--dark);
+}
+.tabela td{
+    border: 1px solid var(--dark);
+    padding: 1em;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--);
 }
 
 /*CONTATO*/
@@ -334,6 +383,10 @@ body{
     margin-bottom: 1em;
 }
 
+.img-contato{
+    display: none;
+}
+
 .formulario label{
     display: block;
     font-size: 15px;
@@ -349,6 +402,7 @@ body{
     background-color: var(--branco);
     border-radius: 10px;
     border: none;
+    border: 1px solid var(--amarelo);
     box-shadow: 10px 10px solid rgba(255, 166, 0, 0.685);
 }
 
@@ -356,7 +410,6 @@ body{
     margin-bottom: 24px;
     background-color: var(--branco);
     border-radius: 10px;
-    border: none;
 }
 
 .botao{
@@ -366,9 +419,10 @@ body{
 
 #btn_submit{
     width: 50%;
-    background-color: var(--amarelo);
+    background-color: var(--branco);
     padding: 13px;
     color: var(--azul);
+    border: 1px solid var(--amarelo);
     border-radius: 10px;
     font-weight: 600;
     font-size: 1em;
@@ -398,25 +452,10 @@ body{
     text-transform: uppercase;
 }
 
-/*TOPO*/
-.topo{
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    display: none;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 }
 
 @media (min-width: 440px) and (max-width: 700px) {
+    /*CABECALHO*/
     .cabecalho{
         background-color: var(--azul);
         padding: 1em;
@@ -457,33 +496,41 @@ body{
     
     /*PRINCIPAL*/
     .principal{
-        margin: auto;
+        padding: 1em;
+        display: flex;
         background-color: var(--azul);
         color: var(--branco);
-        text-align: center;
         padding: 1em;
     }
     
     .principal p{
         margin: auto;
-        font-size: 0.7em;
-        width: 80%;
+        font-size: 0.9em;
     }
     
     .principal img{
-        width: 50%;
+        margin-left: 1em;
+        max-width: 30%;
+        padding: 1em;
     }
-    
+
+    .dupla-main{
+        padding: 3em 2em;
+        width: 80%;
+    }
+
     /*DIARIO*/
     .diario{
         margin-bottom: 1em;
     }
     
+    /*display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 2fr));
+        grid-gap: 24px;*/
     .diario .box-info {
         padding: 0em 1em;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        grid-gap: 24px;
+        display: flex;
+        justify-content: space-evenly;
         margin-top: 36px;
     }
     
@@ -497,20 +544,20 @@ body{
     }
     
     .diario .box-info li .bi{
-        width: 50px;
-        height: 50px;
+        width: 50%;
+        height: 100%;
         border-radius: 10px;
-        font-size: 1em;
+        font-size: 1.5em;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
     .diario .box-info li .bx{
-        width: 50px;
-        height: 50px;
+        width: 45%;
+        height: 100%;
         border-radius: 10px;
-        font-size: 1em;
+        font-size: 1.5em;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -532,20 +579,21 @@ body{
     }
     
     .diario .box-info li .text h3 {
-        font-size: 20px;
+        font-size: 0.9em;
         font-weight: 600;
         color: var(--dark);
     }
     
     .diario .box-info li .text p{
-        color: var(--dark);	
+        color: var(--dark);
+        font-size: 0.8em;
     }
     
     /*GRAFICO*/
     .graficos {
         margin: auto;
         width: 90%;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
         background-color: var(--cinza);
         padding: 1em;
         border-radius: 10px;
@@ -557,12 +605,13 @@ body{
     }
     
     .tab-btn {
+        font-size: 0.9em;
         width: 100%;
         border: none;
         color: #020617;
         background-color: #f0f8ff;
         border-radius: 8px 8px 0px 0px;
-        font-weight: 500;
+        font-weight: 600;
         padding: 8px;
         cursor: pointer;
         transition: background-color .3s ease;
@@ -594,7 +643,7 @@ body{
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 20px;
-        height: 200px;
+        height: 250px;
     }
     
     .barra {
@@ -633,7 +682,7 @@ body{
         margin-top: 3px;
         text-align: center;
         color: var(--branco);
-        font-size: 12px;
+        font-size: 14px;
     }
     
     .dias {
@@ -641,7 +690,7 @@ body{
         justify-content: space-between;
         width: 100%;
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 1em;
         color: var(--dark);
     }
     
@@ -651,7 +700,7 @@ body{
     }
     
     .barra-segunda {
-        background-color: var(--amarelo);
+        background-color: orange;
         border-radius: 5px;
     }
     
@@ -687,10 +736,59 @@ body{
         margin-top: 3px;
         text-align: center;
         color: var(--dark);
-        font-size: 12px;
+        font-size: 14px;
     }
     
-    /*CONTATO*/
+    /*MEDICAO*/
+.medicao{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.medicao h3{
+    font-weight: 600;
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 1em;
+    font-size: 15px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.tabela{
+    margin-bottom: 5em;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.tabela thead{
+    border: 2px solid var(--azul);
+    background-color: var(--dark);
+    padding: 1em;
+}
+
+.tabela thead th{
+    padding: 0.4em;
+    border: 1px solid var(--azul);
+    color: var(--branco);
+    font-size: 13px;
+}
+
+.tabela tr{
+    border: 1px solid var(--dark);
+}
+.tabela td{
+    border: 1px solid var(--dark);
+    padding: 1em;
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--);
+}
+
+/*CONTATO*/
     .contato{
         background-color: var(--azul);
         color: var(--branco);
@@ -702,7 +800,7 @@ body{
         margin-top: 1em;
         text-transform: uppercase;
         font-weight: 600;
-        font-size: 1em;
+        font-size: 1.3em;
         margin-bottom: 3px;
         text-align: center;
     }
@@ -710,8 +808,19 @@ body{
     .contato p{
         font-size: 14px;
         margin-bottom: 1em;
+        text-align: center;
     }
     
+    .img-contato{
+        display: none;
+    }
+
+    .formulario{
+        margin: auto;
+        align-items: center;
+        width: 80%;
+    }
+
     .formulario label{
         display: block;
         font-size: 15px;
@@ -727,6 +836,7 @@ body{
         background-color: var(--branco);
         border-radius: 10px;
         border: none;
+        border: 1px solid var(--amarelo);
         box-shadow: 10px 10px solid rgba(255, 166, 0, 0.685);
     }
     
@@ -734,7 +844,6 @@ body{
         margin-bottom: 24px;
         background-color: var(--branco);
         border-radius: 10px;
-        border: none;
     }
     
     .botao{
@@ -742,12 +851,17 @@ body{
         text-align: center;
     }
     
+    .btn_submit:hover{
+        background-color: var(--amarelo);
+    }
+    
     #btn_submit{
         width: 50%;
-        background-color: var(--amarelo);
+        background-color: var(--branco);
         padding: 13px;
         color: var(--azul);
         border-radius: 10px;
+        border: 1px solid var(--amarelo);
         font-weight: 600;
         font-size: 1em;
         cursor: pointer;
@@ -775,21 +889,1362 @@ body{
         font-size: 12px;
         text-transform: uppercase;
     }
-    
-    /*TOPO*/
-    .topo{
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        display: none;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 700px) and (max-width: 834px){
+    /*CABECALHO*/
+    .cabecalho{
+        background-color: var(--azul);
+        padding: 1em;
+        border-bottom: 2px solid var(--amarelo);
     }
     
+    .cabecalho .home{
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        color: var(--branco);
+        margin-bottom: 1em;
+    }
+    
+    .cabecalho .home a{
+        text-decoration: none;
+        color: var(--branco);
+    }
+    
+    .cabecalho .bi-list{
+        font-size: 22px;
+    }
+    .menu {
+        display: none;
+    }
+    
+    #lista_nav:hover{
+        color: var(--amarelo);
+    }
+    
+    #lista_nav ul{
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none
+    }
+    
+    #lista_nav a{
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 15px;
+    }
+    
+    /*PRINCIPAL*/
+    .principal{
+        padding: 1em;
+        display: flex;
+        background-color: var(--azul);
+        color: var(--branco);
+        padding: 1em;
+    }
+    
+    .principal p{
+        margin: auto;
+        font-size: 1em;
+    }
+    
+    .principal img{
+        margin-left: 1em;
+        max-width: 35%;
+        padding: 1em;
+    }
+
+    .dupla-main{
+        margin-top: 5em;
+        width: 80%;
+    }
+
+    /*DIARIO*/
+    .diario{
+        margin-bottom: 1em;
+    }
+    
+    /*display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 2fr));
+        grid-gap: 24px;*/
+    .diario .box-info {
+        padding: 0em 1em;
+        /*display: flex;
+        justify-content: space-evenly;*/
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+        grid-gap: 24px;
+        margin-top: 36px;
+    }
+    
+    .diario .box-info li {
+        padding: 24px;
+        background: var(--grey);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        grid-gap: 24px;
+    }
+    
+    .diario .box-info li .bi{
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .diario .box-info li .bx{
+        width: 45%;
+        height: 100%;
+        border-radius: 10px;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .diario .box-info li:nth-child(1) .bi{
+        background: var(--amarelo);
+        color: var(--light-amarelo);
+    }
+    
+    .diario .box-info li:nth-child(2) .bx{
+        background: var(--light-blue);
+        color: var(--blue);
+    }
+    
+    .diario .box-info li:nth-child(3) .bx{
+        background: var(--light-green);
+        color: var(--green);
+    }
+    
+    .diario .box-info li .text h3 {
+        font-size: 0.9em;
+        font-weight: 600;
+        color: var(--dark);
+    }
+    
+    .diario .box-info li .text p{
+        color: var(--dark);
+        font-size: 0.8em;
+    }
+    
+    /*GRAFICO*/
+    .graficos {
+        margin: auto;
+        width: 90%;
+        margin-bottom: 2em;
+        background-color: var(--cinza);
+        padding: 1em;
+        border-radius: 10px;
+    }
+    
+    .tab-buttons {
+        display: flex;
+        gap: 6px;
+    }
+    
+    .tab-btn {
+        font-size: 0.9em;
+        width: 100%;
+        border: none;
+        color: #020617;
+        background-color: #f0f8ff;
+        border-radius: 8px 8px 0px 0px;
+        font-weight: 600;
+        padding: 8px;
+        cursor: pointer;
+        transition: background-color .3s ease;
+    }
+    
+    .tab-btn.active {
+        background-color: var(--branco);
+    }
+    
+    .tab-btn:hover {
+        background-color: var(--branco);
+    }
+    
+    .content {
+        display: none;
+    }
+    
+    .conteudo {
+        width: 100%;
+        padding: 20px;
+        border-radius: 0px 0px 8px 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: var(--branco);
+    }
+    
+    .conteudo-grafico {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+    
+    .barra {
+        background-color: var(--azul);
+        border-radius: 5px;
+    }
+    
+    .conteudo-grafico .barra:nth-child(1) {
+        height: 50%;
+    }
+    
+    .barra:nth-child(2) {
+        height: 79%;
+    }
+    
+    .barra:nth-child(3) {
+        height: 60%;
+    }
+    
+    .barra:nth-child(4) {
+        height: 88%;
+    }
+    
+    .barra:nth-child(5) {
+        height: 100%;
+    }
+    
+    .barra:nth-child(6) {
+        height: 90%;
+    }
+    
+    .barra:nth-child(7) {
+        height: 76%;
+    }
+    .barra p {
+        margin-top: 3px;
+        text-align: center;
+        color: var(--branco);
+        font-size: 14px;
+    }
+    
+    .dias {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1em;
+        color: var(--dark);
+    }
+    
+    .dias span {
+        text-align: center;
+        width: 30px;
+    }
+    
+    .barra-segunda {
+        background-color: orange;
+        border-radius: 5px;
+    }
+    
+    .conteudo-grafico .barra-segunda:nth-child(1) {
+        height: 100%;
+    }
+    
+    .barra-segunda:nth-child(2) {
+        height: 70%;
+    }
+    
+    .barra-segunda:nth-child(3) {
+        height: 55%;
+    }
+    
+    .barra-segunda:nth-child(4) {
+        height: 85%;
+    }
+    
+    .barra-segunda:nth-child(5) {
+        height: 60%;
+    }
+    
+    .barra-segunda:nth-child(6) {
+        height: 68%;
+    }
+    
+    .barra-segunda:nth-child(7) {
+        height: 75%;
+    }
+    
+    .barra-segunda p {
+        margin-top: 3px;
+        text-align: center;
+        color: var(--dark);
+        font-size: 14px;
+    }
+    
+    /*MEDICAO*/
+.medicao{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.medicao h3{
+    font-weight: 600;
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 1em;
+    font-size: 16px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.tabela{
+    margin-bottom: 5em;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.tabela thead{
+    border: 2px solid var(--azul);
+    background-color: var(--dark);
+    padding: 1em;
+}
+
+.tabela thead th{
+    padding: 0.4em;
+    border: 1px solid var(--azul);
+    color: var(--branco);
+    font-size: 14px;
+}
+
+.tabela tr{
+    border: 1px solid var(--dark);
+}
+.tabela td{
+    border: 1px solid var(--dark);
+    padding: 1em;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--);
+}
+
+/*CONTATO*/
+    .contato{
+        background-color: var(--azul);
+        color: var(--branco);
+        margin: auto;
+        padding: 1em;
+        display: flex;
+    }
+    
+    .contato h2{
+        margin-top: 3em;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1em;
+        margin-bottom: 3px;
+    }
+    
+    .contato p{
+        font-size: 13px;
+        margin-bottom: 1em;
+        width: 90%;
+    }
+
+    .img-contato img{
+        margin-left: 1em;
+        margin-top: 2em;
+        max-width: 75%;
+        padding: 2em;
+    }
+
+    .formulario{
+        width: 85%;
+    }
+
+    .formulario label{
+        display: block;
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--branco);
+        padding: 5px;
+    }
+    
+    .formulario input{
+        width: 100%;
+        margin-bottom: 24px;
+        padding: 10px;
+        background-color: var(--branco);
+        border-radius: 10px;
+        border: none;
+        border: 1px solid var(--amarelo);
+        box-shadow: 10px 10px solid rgba(255, 166, 0, 0.685);
+    }
+    
+    #mensagem{
+        margin-bottom: 24px;
+        background-color: var(--branco);
+        border-radius: 10px;
+    }
+    
+    .botao{
+        border: none;
+        text-align: center;
+    }
+    
+    .btn_submit:hover{
+        background-color: var(--amarelo);
+    }
+    
+    #btn_submit{
+        width: 50%;
+        background-color: var(--branco);
+        padding: 13px;
+        color: var(--azul);
+        border-radius: 10px;
+        border: 1px solid var(--amarelo);
+        font-weight: 600;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    
+    /*RODAPE*/
+    .rodape{
+        background-color: var(--azul);
+        color: var(--branco);
+        text-align: center;
+        border-top: 1px solid var(--amarelo);
+    }
+    
+    .rodape p{
+        margin-top: 1em;
+        font-weight: 200;
+        font-size: 13px;
+        text-transform: lowercase;
+    }
+    
+    .rodape span{
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 834px) and (max-width: 1100px){
+    /*CABECALHO*/
+    .cabecalho{
+        background-color: var(--azul);
+        padding: 1em;
+        border-bottom: 2px solid var(--amarelo);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .cabecalho .home{
+        margin-top: 1em;
+        padding: 0em 1em;
+        font-size: 20px;
+        color: var(--branco);
+        margin-bottom: 1em;
+    }
+    
+    .cabecalho .home a{
+        text-decoration: none;
+        color: var(--branco);
+    }
+    
+    .iconscabecalho{
+        display: none;
+    }
+
+    .cabecalho .bi-list{
+        display: none;
+    }
+
+    #lista_nav:hover{
+        color: var(--amarelo);
+    }
+    
+    #lista_nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+
+    #lista_nav li{
+        margin-right: 2em;
+    }
+    
+    #lista_nav a{
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 15px;
+    }
+    
+    /*PRINCIPAL*/
+    .principal{
+        padding: 1em;
+        display: flex;
+        background-color: var(--azul);
+        color: var(--branco);
+        padding: 1em;
+    }
+    
+    .dupla-main{
+        margin-top: 5em;
+        width: 50%;
+    }
+
+    .principal h3{
+        margin: auto;
+        font-size: 2em;
+    }
+
+    .principal p{
+        margin: auto;
+        font-size: 1.2em;
+    }
+    
+    .principal img{
+        margin-left: 2em;
+        max-width: 35%;
+        padding: 1em;
+    }
+    /*DIARIO*/
+    .diario{
+        margin-bottom: 1em;
+    }
+    
+    /*display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 2fr));
+        grid-gap: 24px;*/
+    .diario .box-info {
+        padding: 0em 1em;
+        /*display: flex;
+        justify-content: space-evenly;*/
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+        grid-gap: 24px;
+        margin-top: 36px;
+    }
+    
+    .diario .box-info li {
+        padding: 24px;
+        background: var(--grey);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        grid-gap: 24px;
+    }
+    
+    .diario .box-info li .bi{
+        width: 25%;
+        height: 100%;
+        border-radius: 10px;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .diario .box-info li .bx{
+        width: 25%;
+        height: 100%;
+        border-radius: 10px;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .diario .box-info li:nth-child(1) .bi{
+        background: var(--amarelo);
+        color: var(--light-amarelo);
+    }
+    
+    .diario .box-info li:nth-child(2) .bx{
+        background: var(--light-blue);
+        color: var(--blue);
+    }
+    
+    .diario .box-info li:nth-child(3) .bx{
+        background: var(--light-green);
+        color: var(--green);
+    }
+    
+    .diario .box-info li .text h3 {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: var(--dark);
+    }
+    
+    .diario .box-info li .text p{
+        color: var(--dark);
+        font-size: 0.9em;
+    }
+    
+    /*GRAFICO*/
+    .graficos {
+        margin: auto;
+        width: 90%;
+        margin-bottom: 2em;
+        background-color: var(--cinza);
+        padding: 1em;
+        border-radius: 10px;
+    }
+    
+    .tab-buttons {
+        display: flex;
+        gap: 6px;
+    }
+    
+    .tab-btn {
+        font-size: 0.9em;
+        width: 100%;
+        border: none;
+        color: #020617;
+        background-color: #f0f8ff;
+        border-radius: 8px 8px 0px 0px;
+        font-weight: 600;
+        padding: 8px;
+        cursor: pointer;
+        transition: background-color .3s ease;
+    }
+    
+    .tab-btn.active {
+        background-color: var(--branco);
+    }
+    
+    .tab-btn:hover {
+        background-color: var(--branco);
+    }
+    
+    .content {
+        display: none;
+    }
+    
+    .conteudo {
+        width: 100%;
+        padding: 20px;
+        border-radius: 0px 0px 8px 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: var(--branco);
+    }
+    
+    .conteudo-grafico {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        height: 300px;
+    }
+    
+    .barra {
+        background-color: var(--azul);
+        border-radius: 5px;
+    }
+    
+    .conteudo-grafico .barra:nth-child(1) {
+        height: 50%;
+    }
+    
+    .barra:nth-child(2) {
+        height: 79%;
+    }
+    
+    .barra:nth-child(3) {
+        height: 60%;
+    }
+    
+    .barra:nth-child(4) {
+        height: 88%;
+    }
+    
+    .barra:nth-child(5) {
+        height: 100%;
+    }
+    
+    .barra:nth-child(6) {
+        height: 90%;
+    }
+    
+    .barra:nth-child(7) {
+        height: 76%;
+    }
+    .barra p {
+        margin-top: 3px;
+        text-align: center;
+        color: var(--branco);
+        font-size: 14px;
+    }
+    
+    .dias {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1em;
+        color: var(--dark);
+    }
+    
+    .dias span {
+        text-align: center;
+        width: 30px;
+    }
+    
+    .barra-segunda {
+        background-color: orange;
+        border-radius: 5px;
+    }
+    
+    .conteudo-grafico .barra-segunda:nth-child(1) {
+        height: 100%;
+    }
+    
+    .barra-segunda:nth-child(2) {
+        height: 70%;
+    }
+    
+    .barra-segunda:nth-child(3) {
+        height: 55%;
+    }
+    
+    .barra-segunda:nth-child(4) {
+        height: 85%;
+    }
+    
+    .barra-segunda:nth-child(5) {
+        height: 60%;
+    }
+    
+    .barra-segunda:nth-child(6) {
+        height: 68%;
+    }
+    
+    .barra-segunda:nth-child(7) {
+        height: 75%;
+    }
+    
+    .barra-segunda p {
+        margin-top: 3px;
+        text-align: center;
+        color: var(--dark);
+        font-size: 14px;
+    }
+    
+    /*MEDICAO*/
+.medicao{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.medicao h3{
+    font-weight: 600;
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 1em;
+    font-size: 16px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.tabela{
+    margin-bottom: 5em;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.tabela thead{
+    border: 2px solid var(--azul);
+    background-color: var(--dark);
+    padding: 1em;
+}
+
+.tabela thead th{
+    padding: 0.4em;
+    border: 1px solid var(--azul);
+    color: var(--branco);
+    font-size: 14px;
+}
+
+.tabela tr{
+    border: 1px solid var(--dark);
+}
+.tabela td{
+    border: 1px solid var(--dark);
+    padding: 1em;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--);
+}
+
+/*CONTATO*/
+    .contato{
+        margin: 0 auto;
+        background-color: var(--azul);
+        color: var(--branco);
+        padding: 1em;
+        display: flex;
+    }
+    
+    .contato h2{
+        margin-top: 3em;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1em;
+        margin-bottom: 3px;
+    }
+    
+    .contato p{
+        font-size: 13px;
+        margin-bottom: 1em;
+        width: 90%;
+    }
+
+    .img-contato img{
+        margin-left: 5em;
+        margin-top: 1em;
+        max-width: 72%;
+        padding: 2em;
+    }
+
+    .duplas {
+        margin-top: 3.5em;
+    }
+
+    .formulario{
+        width: 85%;
+    }
+
+    .formulario label{
+        display: block;
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--branco);
+        padding: 5px;
+    }
+    
+    .formulario input{
+        width: 100%;
+        margin-bottom: 24px;
+        padding: 10px;
+        background-color: var(--branco);
+        border-radius: 10px;
+        border: none;
+        border: 1px solid var(--amarelo);
+        box-shadow: 10px 10px solid rgba(255, 166, 0, 0.685);
+    }
+
+    #mensagem{
+        margin-bottom: 24px;
+        background-color: var(--branco);
+        border-radius: 10px;
+    }
+    
+    .botao{
+        border: none;
+        text-align: center;
+    }
+    
+    .btn_submit:hover{
+        background-color: var(--amarelo);
+    }
+    
+    #btn_submit{
+        width: 50%;
+        background-color: var(--branco);
+        padding: 13px;
+        color: var(--azul);
+        border-radius: 10px;
+        border: 1px solid var(--amarelo);
+        font-weight: 600;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    
+    /*RODAPE*/
+    .rodape{
+        background-color: var(--azul);
+        color: var(--branco);
+        text-align: center;
+        border-top: 1px solid var(--amarelo);
+    }
+    
+    .rodape p{
+        margin-top: 1em;
+        font-weight: 200;
+        font-size: 13px;
+        text-transform: lowercase;
+    }
+    
+    .rodape span{
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    /*CABECALHO*/
+    .cabecalho{
+        background-color: var(--azul);
+        padding: 1em;
+        border-bottom: 2px solid var(--amarelo);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .cabecalho .home{
+        margin-top: 1em;
+        padding: 0em 1em;
+        font-size: 20px;
+        color: var(--branco);
+        margin-bottom: 1em;
+    }
+    
+    .cabecalho .home a{
+        text-decoration: none;
+        color: var(--branco);
+    }
+    
+    .iconscabecalho{
+        display: none;
+    }
+
+    .cabecalho .bi-list{
+        display: none;
+    }
+
+    #lista_nav:hover{
+        color: var(--amarelo);
+    }
+    
+    #lista_nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+
+    #lista_nav li{
+        margin-right: 2em;
+    }
+    
+    #lista_nav a{
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 15px;
+    }
+    
+    /*PRINCIPAL*/
+    .principal{
+        margin: auto;
+        justify-content: center;
+        padding: 1em;
+        display: flex;
+        background-color: var(--azul);
+        color: var(--branco);
+        padding: 1em;
+    }
+    
+    .dupla-main{
+        margin-top: 5em;
+        width: 35%;
+    }
+
+    .principal h3{
+        margin: auto;
+        font-size: 2em;
+    }
+
+    .principal p{
+        margin: auto;
+        font-size: 1.2em;
+    }
+    
+    .principal img{
+        max-width: 25%;
+        padding: 1em;
+    }
+    /*DIARIO*/
+    .diario{
+        padding: 0em 3em;
+        margin-bottom: 1em;
+    }
+
+    .diario .box-info {
+        padding: 0em 1em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        grid-gap: 24px;
+        margin-top: 36px;
+    }
+    
+    .diario .box-info li {
+        padding: 24px;
+        background: var(--grey);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        grid-gap: 24px;
+    }
+    
+    .diario .box-info li .bi{
+        width: 20%;
+        height: 100%;
+        border-radius: 10px;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .diario .box-info li .bx{
+        width: 20%;
+        height: 100%;
+        border-radius: 10px;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .diario .box-info li:nth-child(1) .bi{
+        background: var(--amarelo);
+        color: var(--light-amarelo);
+    }
+    
+    .diario .box-info li:nth-child(2) .bx{
+        background: var(--light-blue);
+        color: var(--blue);
+    }
+    
+    .diario .box-info li:nth-child(3) .bx{
+        background: var(--light-green);
+        color: var(--green);
+    }
+    
+    .diario .box-info li .text h3 {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: var(--dark);
+    }
+    
+    .diario .box-info li .text p{
+        color: var(--dark);
+        font-size: 1.1em;
+    }
+    
+    /*GRAFICO*/
+    .graficos {
+        margin: auto;
+        width: 80%;
+        margin-bottom: 2em;
+        background-color: var(--cinza);
+        padding: 1em;
+        border-radius: 10px;
+    }
+    
+    .tab-buttons {
+        display: flex;
+        gap: 6px;
+    }
+    
+    .tab-btn {
+        font-size: 1.2em;
+        width: 100%;
+        border: none;
+        color: #020617;
+        background-color: #f0f8ff;
+        border-radius: 8px 8px 0px 0px;
+        font-weight: 600;
+        padding: 8px;
+        cursor: pointer;
+        transition: background-color .3s ease;
+    }
+    
+    .tab-btn.active {
+        background-color: var(--branco);
+    }
+    
+    .tab-btn:hover {
+        background-color: var(--branco);
+    }
+    
+    .content {
+        display: none;
+    }
+    
+    .conteudo {
+        width: 100%;
+        padding: 20px;
+        border-radius: 0px 0px 8px 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: var(--branco);
+    }
+    
+    .conteudo-grafico {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        height: 400px;
+    }
+    
+    .barra {
+        background-color: var(--azul);
+        border-radius: 5px;
+    }
+    
+    .conteudo-grafico .barra:nth-child(1) {
+        height: 50%;
+    }
+    
+    .barra:nth-child(2) {
+        height: 79%;
+    }
+    
+    .barra:nth-child(3) {
+        height: 60%;
+    }
+    
+    .barra:nth-child(4) {
+        height: 88%;
+    }
+    
+    .barra:nth-child(5) {
+        height: 100%;
+    }
+    
+    .barra:nth-child(6) {
+        height: 90%;
+    }
+    
+    .barra:nth-child(7) {
+        height: 76%;
+    }
+    .barra p {
+        margin-top: 3px;
+        text-align: center;
+        color: var(--branco);
+        font-size: 16px;
+    }
+    
+    .dias {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1.1em;
+        color: var(--dark);
+        padding: 0em 0.8em;
+    }
+    
+    .dias span {
+        text-align: center;
+        width: 30px;
+    }
+    
+    .barra-segunda {
+        background-color: orange;
+        border-radius: 5px;
+    }
+    
+    .conteudo-grafico .barra-segunda:nth-child(1) {
+        height: 100%;
+    }
+    
+    .barra-segunda:nth-child(2) {
+        height: 70%;
+    }
+    
+    .barra-segunda:nth-child(3) {
+        height: 55%;
+    }
+    
+    .barra-segunda:nth-child(4) {
+        height: 85%;
+    }
+    
+    .barra-segunda:nth-child(5) {
+        height: 60%;
+    }
+    
+    .barra-segunda:nth-child(6) {
+        height: 68%;
+    }
+    
+    .barra-segunda:nth-child(7) {
+        height: 75%;
+    }
+    
+    .barra-segunda p {
+        margin-top: 3px;
+        text-align: center;
+        color: var(--dark);
+        font-size: 16px;
+    }
+    
+    /*MEDICAO*/
+.medicao{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.medicao h3{
+    font-weight: 600;
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 1em;
+    font-size: 20px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.tabela{
+    margin-bottom: 5em;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.tabela thead{
+    border: 2px solid var(--azul);
+    background-color: var(--dark);
+    padding: 1em;
+}
+
+.tabela thead th{
+    padding: 0.4em;
+    border: 1px solid var(--azul);
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tabela tr{
+    border: 1px solid var(--dark);
+}
+.tabela td{
+    border: 1px solid var(--dark);
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*CONTATO*/
+    .contato{
+        margin: 0 auto;
+        background-color: var(--azul);
+        color: var(--branco);
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .contato h2{
+        margin-top: 2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.2em;
+        margin-bottom: 3px;
+    }
+    
+    .contato p{
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 1em;
+        width: 90%;
+    }
+
+    .img-contato img{
+        max-width: 80%;
+        padding: 2em;
+    }
+
+    .formulario{
+        width: 85%;
+    }
+
+    .formulario label{
+        display: block;
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--branco);
+        padding: 5px;
+    }
+    
+    .formulario input{
+        width: 100%;
+        margin-bottom: 24px;
+        padding: 10px;
+        background-color: var(--branco);
+        border-radius: 10px;
+        border: none;
+        border: 1px solid var(--amarelo);
+        box-shadow: 10px 10px solid rgba(255, 166, 0, 0.685);
+    }
+
+    #mensagem{
+        margin-bottom: 24px;
+        background-color: var(--branco);
+        border-radius: 10px;
+    }
+    
+    .botao{
+        border: none;
+        text-align: center;
+    }
+    
+    #btn_submit{
+        width: 50%;
+        background-color: var(--branco);
+        padding: 13px;
+        color: var(--azul);
+        border-radius: 10px;
+        border: 1px solid var(--amarelo);
+        font-weight: 600;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    
+    /*RODAPE*/
+    .rodape{
+        background-color: var(--azul);
+        color: var(--branco);
+        text-align: center;
+        border-top: 1px solid var(--amarelo);
+    }
+    
+    .rodape p{
+        margin-top: 1em;
+        font-weight: 200;
+        font-size: 1em;
+        text-transform: lowercase;
+    }
+    
+    .rodape span{
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
 }
