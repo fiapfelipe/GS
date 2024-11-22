@@ -36,6 +36,7 @@ document.getElementById("btn_submit").addEventListener("click", function() {
     alert("Enviado com sucesso!");
 });
 
+//REGISTRO
 function confirmarAcao() {
     var resposta = confirm("Você tem certeza?");
     if (resposta) {
