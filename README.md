@@ -27,10 +27,9 @@
 ## Descrição do Projeto
 Solaris fornece a solução para administrar o consumo e gasto da energia da sua placa solar.
 
-Consiste em uma aplicação que transmite quantos kWh está sendo consumido no total e quanto que a placa solar está gerando de energia, permitindo assim de uma forma visual, gerenciar seus gastos, impactando diretamente em sua renda. O importante é termos um ecossistema equilibrado e agradável.
-
-Esta aplicação irá exibir uma tabela dos meses e quanto foi gasto de energia no total, fazendo a comparação e mostrando a diferença entre os meses, acusando se houve uma alteração muito gritante. 
-Será feito a partir da taxa de energia cobrada em São Paulo o calculo estimado para a conta do mês.
+Nossa solução prática e eficiente consistem em monitorar o consumo e a geração de energia solar, ajudando o usuário a economizar e gerenciar seus gastos de forma sustentável. A aplicação exibe, de maneira visual e detalhada, informações sobre a energia gerada pela sua placa solar e o consumo total em kwh.
+Além de acompanhar o consumo diário, semanal e mensal, o sistema compara períodos, identifica variações significativas e calcula estimativas da conta com base na taxa de energia de São Paulo. Tudo isso alimentado automaticamente por dados fornecidos via API do inversor solar. 
+Mais que uma ferramenta de gestão, nosso objetivo é promover um equilíbrio financeiro e ambiental, tornando a sustentabilidade acessível e viável para todos.
 
 ## Tecnologias Utilizadas
 
