@@ -29,7 +29,7 @@ Solaris fornece a solução para administrar o consumo e gasto da energia da sua
 
 Nossa solução prática e eficiente consistem em monitorar o consumo e a geração de energia solar, ajudando o usuário a economizar e gerenciar seus gastos de forma sustentável. A aplicação exibe, de maneira visual e detalhada, informações sobre a energia gerada pela sua placa solar e o consumo total em kwh.
 Além de acompanhar o consumo diário, semanal e mensal, o sistema compara períodos, identifica variações significativas e calcula estimativas da conta com base na taxa de energia de São Paulo. Tudo isso alimentado automaticamente por dados fornecidos via API do inversor solar. 
-Mais que uma ferramenta de gestão, nosso objetivo é promover um equilíbrio financeiro e ambiental, tornando a sustentabilidade acessível e viável.
+Mais que uma ferramenta de gestão, nosso objetivo é promover um equilíbrio financeiro e ambiental, tornando a sustentabilidade acessível e viável para todos.
 
 ## Tecnologias Utilizadas
 
